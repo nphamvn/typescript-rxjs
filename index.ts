@@ -1,8 +1,10 @@
-//Emit a seuqence of numbers
+//Emitting an object, array, and function
 
 import { of } from 'rxjs';
 
-//emit any number of provided values in sequence
-const source = of(1, 2, 3, 4, 5);
+//Emit value of any type
+const source = of({ name: 'Nam', age: 26 }, [1, 2, 3], function sayHi() {
+  return 'Hello';
+});
 
 const subscribe = source.subscribe((val) => console.log(val));
