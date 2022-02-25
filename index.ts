@@ -2,7 +2,12 @@
 
 import { from } from 'rxjs';
 
-//emit array as a sequence of values
-const arraySource = from([1, 2, 3, 4, 5]);
+//emit result of promise
+const promiseSource = from(
+  new Promise((resolve) => {
+    let num = Math.random() * 100;
+    resolve(num);
+  })
+);
 
-const subscribe = arraySource.subscribe((val) => console.log(val));
+const subscribe = promiseSource.subscribe((val) => console.log(val));
