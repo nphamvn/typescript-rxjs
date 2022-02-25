@@ -1,6 +1,10 @@
+//Add 10 to each number
+
 import { from } from 'rxjs';
+import { map } from 'rxjs/operators';
 
-//Observable from string
-const souce = from('Hello World');
+const source = from([1, 2, 3, 4, 5]);
 
-const subscribe = souce.subscribe((val) => console.log(val));
+const example = source.pipe(map((val) => val + 10));
+
+const subscribe = example.subscribe((val) => console.log(val));

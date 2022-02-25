@@ -1,2 +1,2 @@
-from
-Turn an array, promise or interable into an observable.
+map
+Apply projection with value from source.
