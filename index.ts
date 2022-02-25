@@ -1,13 +1,10 @@
-//Observable from array
-
 import { from } from 'rxjs';
 
-//emit result of promise
-const promiseSource = from(
-  new Promise((resolve) => {
-    let num = Math.random() * 100;
-    resolve(num);
-  })
-);
+//Observable from collection
+const map = new Map();
+map.set(1, 'One');
+map.set(2, 'Two');
 
-const subscribe = promiseSource.subscribe((val) => console.log(val));
+const souce = from(map);
+
+const subscribe = souce.subscribe((val) => console.log(map.get(val[0])));
