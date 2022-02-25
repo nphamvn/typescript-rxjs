@@ -1,2 +1,2 @@
-of
-Emit variable amount of values in a sequence and the emit completion nofitication.
+from
+Turn an array, promise or interable into an observable.

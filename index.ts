@@ -1,10 +1,8 @@
-//Emitting an object, array, and function
+//Observable from array
 
-import { of } from 'rxjs';
+import { from } from 'rxjs';
 
-//Emit value of any type
-const source = of({ name: 'Nam', age: 26 }, [1, 2, 3], function sayHi() {
-  return 'Hello';
-});
+//emit array as a sequence of values
+const arraySource = from([1, 2, 3, 4, 5]);
 
-const subscribe = source.subscribe((val) => console.log(val));
+const subscribe = arraySource.subscribe((val) => console.log(val));
