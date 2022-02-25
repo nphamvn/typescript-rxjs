@@ -1,6 +1,8 @@
-import { interval } from 'rxjs';
+//Emit a seuqence of numbers
 
-//Emit sequence of values at 1 second interval
-const source = interval(1000);
+import { of } from 'rxjs';
 
-const subscriber = source.subscribe((number) => console.log(number));
+//emit any number of provided values in sequence
+const source = of(1, 2, 3, 4, 5);
+
+const subscribe = source.subscribe((val) => console.log(val));

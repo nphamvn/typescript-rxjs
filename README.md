@@ -1,2 +1,2 @@
-INTERVAL
-Emit numbers in sequence base on provide timeframe
+of
+Emit variable amount of values in a sequence and the emit completion nofitication.
