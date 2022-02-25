@@ -1,6 +1,6 @@
-// Import stylesheets
-import './style.css';
+import { interval } from 'rxjs';
 
-// Write TypeScript code!
-const appDiv: HTMLElement = document.getElementById('app');
-appDiv.innerHTML = `<h1>TypeScript Starter</h1>`;
+//Emit sequence of values at 1 second interval
+const source = interval(1000);
+
+const subscriber = source.subscribe((number) => console.log(number));
