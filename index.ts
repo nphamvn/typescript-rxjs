@@ -1,10 +1,13 @@
-//Add 10 to each number
+// Map to single property
 
 import { from } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-const source = from([1, 2, 3, 4, 5]);
+const source = from([
+  { name: 'Nam', age: 26 },
+  { name: 'Yen Anh', age: 23 },
+]);
 
-const example = source.pipe(map((val) => val + 10));
+const subject = source.pipe(map((val) => val.name + ' - ' + val.age));
 
-const subscribe = example.subscribe((val) => console.log(val));
+const subscribe = subject.subscribe((name) => console.log(name));
